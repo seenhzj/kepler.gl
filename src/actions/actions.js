@@ -136,5 +136,5 @@ export const receiveMapConfig =  createAction(
  */
 export const keplerGlInit =  createAction(
   ActionTypes.INIT,
-  ({mapboxApiAccessToken}) => ({mapboxApiAccessToken})
+  ({mapboxApiAccessToken} = {}) => ({mapboxApiAccessToken})
 );

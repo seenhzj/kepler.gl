@@ -63,7 +63,7 @@ export function provideInitialState(initialState) {
       {}
     );
 
-  const handleRenameEntry = (state, {payload: [oldId, newId]}) =>
+  const handleRenameEntry = (state, {payload: {oldId, newId}}) =>
     Object.keys(state).reduce(
       (accu, curr) => ({
         ...accu,
