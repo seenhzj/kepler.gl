@@ -91,7 +91,7 @@ import {createAction} from 'redux-actions';
  */
 export const addDataToMap = createAction(
   ActionTypes.ADD_DATA_TO_MAP,
-  (datasets, options, config) => {datasets, options, config}
+  (datasets, options, config) => ({datasets, options, config})
 );
 
 /**
