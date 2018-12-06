@@ -20,12 +20,33 @@
 
 import documentation from 'documentation';
 import fs from 'fs';
-import {resolve} from 'path';
+import {resolve, join} from 'path';
+import streamArray from 'stream-array';
+import vfs from 'vinyl-fs';
 
 const INPUT_CONFIG = {
-  shallow: true,
+  shallow: false,
   access: ['public'],
   'document-exported': true
+};
+
+const HTML_CONFIG = {
+  shallow: false,
+  access: ['public'],
+  'document-exported': true,
+  toc: [
+    {
+      name: 'Action Wrappers',
+      file: resolve('./docs/api-reference/actions/action-wrapper.md'),
+      description: 'Here are some actions',
+      children: [
+        'wrapTo',
+        'isForwardAction',
+        'unwrap',
+        'forwardTo'
+      ]
+    }
+  ]
 };
 
 const OUT_CONFIG = {
@@ -43,16 +64,24 @@ const TREE = {
     {
       path: 'actions',
       children: [
-        // 'actions',
+        // 'index',
         'action-wrapper',
-        // 'identity-actions',
-        // 'vis-state-actions',
-        // 'map-state-actions',
-        // 'map-style-actions',
-        // 'ui-state-actions'
+        'identity-actions',
+        'vis-state-actions',
+        'map-state-actions',
+        'map-style-actions',
+        'ui-state-actions'
       ]
     }
   ]
+}
+
+function buildHtmlDocs() {
+  documentation.build([resolve('./src/actions/index.js')], HTML_CONFIG)
+    .then(documentation.formats.html)
+    .then(output => {
+      streamArray(output).pipe(vfs.dest(resolve('./docs/api-reference/html'));
+    });
 }
 
 
@@ -84,7 +113,8 @@ function buildDocs(nodePath, node) {
   });
 }
 
-buildDocs(null, TREE);
+// buildDocs(null, TREE);
+buildHtmlDocs();
 
 // documentation.build(['./src/actions'], INPUT_CONFIG)
 //   .then(res => {

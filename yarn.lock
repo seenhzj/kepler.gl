@@ -19,19 +19,30 @@
     seer "^0.2.4"
     viewport-mercator-project "^6.0.0"
 
-"@deck.gl/layers@^6.2.4":
-  version "6.2.4"
-  resolved "https://unpm.uberinternal.com/@deck.gl%2flayers/-/layers-6.2.4.tgz#c5c9473a174cd45d01cd404177cbff20c9da1f56"
+"@deck.gl/core@^6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@deck.gl/core/-/core-6.3.0.tgz#35b3b4ead4afcfef8a67c288d9f13931741f9272"
   dependencies:
-    "@deck.gl/core" "^6.2.4"
+    luma.gl "^6.3.0"
+    math.gl "^2.2.0"
+    mjolnir.js "^2.0.0"
+    probe.gl "^2.0.1"
+    seer "^0.2.4"
+    viewport-mercator-project "^6.0.0"
+
+"@deck.gl/layers@^6.2.4":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@deck.gl/layers/-/layers-6.3.0.tgz#e317f24a29f68bddef7a3ab1eef5b47f3db9b3b3"
+  dependencies:
+    "@deck.gl/core" "^6.3.0"
     d3-hexbin "^0.2.1"
     earcut "^2.0.6"
 
 "@deck.gl/react@^6.2.4":
-  version "6.2.4"
-  resolved "https://unpm.uberinternal.com/@deck.gl%2freact/-/react-6.2.4.tgz#fab68aaac23a1429c4ad84dd09879ca764543f2f"
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@deck.gl/react/-/react-6.3.0.tgz#49b6d7edd6b60744c2d49eb786a7f6a4bb27e2f4"
   dependencies:
-    "@deck.gl/core" "^6.2.4"
+    "@deck.gl/core" "^6.3.0"
     prop-types "^15.6.0"
 
 "@mapbox/extent@0.4.0":
@@ -5314,6 +5325,16 @@ luma.gl@^6.2.0:
     seer "^0.2.4"
     webgl-debug "^2.0.0"
 
+luma.gl@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/luma.gl/-/luma.gl-6.3.0.tgz#05a253ea6912a8c075e85445275581b5369cde65"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    math.gl "^2.2.0"
+    probe.gl "^2.0.1"
+    seer "^0.2.4"
+    webgl-debug "^2.0.0"
+
 magic-string@^0.22.4:
   version "0.22.5"
   resolved "http://registry.npmjs.org/magic-string/-/magic-string-0.22.5.tgz#8e9cf5afddf44385c1da5bc2a6a0dbd10b03657e"
@@ -5663,6 +5684,13 @@ mjolnir.js@^1.0.0, mjolnir.js@^1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/mjolnir.js/-/mjolnir.js-1.2.2.tgz#65938d6b443fed5b5c65456e6c934b01fece3610"
   dependencies:
+    hammerjs "^2.0.8"
+
+mjolnir.js@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/mjolnir.js/-/mjolnir.js-2.0.1.tgz#06c19bea397634d9eb7a5b5e3860eb251b3478bd"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
     hammerjs "^2.0.8"
 
 mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
@@ -8984,7 +9012,7 @@ viewport-mercator-project@^6.0.0:
     "@babel/runtime" "^7.0.0"
     math.gl "^2.1.0"
 
-vinyl-fs@^3.0.2:
+vinyl-fs@^3.0.2, vinyl-fs@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/vinyl-fs/-/vinyl-fs-3.0.3.tgz#c85849405f67428feabbbd5c5dbdd64f47d31bc7"
   dependencies:
