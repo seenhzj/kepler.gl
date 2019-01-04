@@ -52,6 +52,7 @@ export default () => (
     <Route path="/" component={App}>
       <IndexRoute component={Home} />
       <Route path="demo(/:id)" component={Demo}/>
+      <Route path="auth" component={Demo}/>
     </Route>
   </Router>
 );
