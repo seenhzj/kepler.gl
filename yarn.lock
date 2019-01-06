@@ -8,17 +8,6 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
-"@deck.gl/core@^6.2.4":
-  version "6.2.4"
-  resolved "https://registry.yarnpkg.com/@deck.gl/core/-/core-6.2.4.tgz#c569854633f3087dea9866276ad68812671487d7"
-  dependencies:
-    luma.gl "^6.2.0"
-    math.gl "^2.1.0"
-    mjolnir.js "^1.0.0"
-    probe.gl "^2.0.1"
-    seer "^0.2.4"
-    viewport-mercator-project "^6.0.0"
-
 "@deck.gl/core@^6.3.0":
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/@deck.gl/core/-/core-6.3.0.tgz#35b3b4ead4afcfef8a67c288d9f13931741f9272"
@@ -30,19 +19,37 @@
     seer "^0.2.4"
     viewport-mercator-project "^6.0.0"
 
-"@deck.gl/layers@^6.2.4":
+"@deck.gl/core@^6.3.3":
+  version "6.3.3"
+  resolved "https://registry.yarnpkg.com/@deck.gl/core/-/core-6.3.3.tgz#416fb380c8db1d4882ae7563a953ac71af1641a7"
+  dependencies:
+    luma.gl "^6.3.0"
+    math.gl "^2.2.0"
+    mjolnir.js "^2.0.0"
+    probe.gl "^2.0.1"
+    seer "^0.2.4"
+    viewport-mercator-project "^6.0.0"
+
+"@deck.gl/experimental-layers@6.3.0":
   version "6.3.0"
-  resolved "https://registry.yarnpkg.com/@deck.gl/layers/-/layers-6.3.0.tgz#e317f24a29f68bddef7a3ab1eef5b47f3db9b3b3"
+  resolved "https://registry.yarnpkg.com/@deck.gl/experimental-layers/-/experimental-layers-6.3.0.tgz#bafe9846144b7607f6982212ffafc7331570a8aa"
   dependencies:
     "@deck.gl/core" "^6.3.0"
+    "@deck.gl/layers" "^6.3.0"
+
+"@deck.gl/layers@^6.3.0":
+  version "6.3.3"
+  resolved "https://registry.yarnpkg.com/@deck.gl/layers/-/layers-6.3.3.tgz#99f92706d709381e668f2c4848de694c1938aaf0"
+  dependencies:
+    "@deck.gl/core" "^6.3.3"
     d3-hexbin "^0.2.1"
     earcut "^2.0.6"
 
-"@deck.gl/react@^6.2.4":
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/@deck.gl/react/-/react-6.3.0.tgz#49b6d7edd6b60744c2d49eb786a7f6a4bb27e2f4"
+"@deck.gl/react@^6.3.0":
+  version "6.3.3"
+  resolved "https://registry.yarnpkg.com/@deck.gl/react/-/react-6.3.3.tgz#18b681dbb0fc7a070cd590188f12421c11bce4ec"
   dependencies:
-    "@deck.gl/core" "^6.3.0"
+    "@deck.gl/core" "^6.3.3"
     prop-types "^15.6.0"
 
 "@mapbox/extent@0.4.0":
@@ -2304,10 +2311,6 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-curry@^1.2.0:
-  version "1.2.0"
-  resolved "http://registry.npmjs.org/curry/-/curry-1.2.0.tgz#9e6dd289548dba7e653d5ae3fe903fe7dfb33af2"
-
 d3-array@1, d3-array@^1.1.1, d3-array@^1.2.0:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/d3-array/-/d3-array-1.2.4.tgz#635ce4d5eea759f6f605863dbcfc30edc737f71f"
@@ -2519,13 +2522,13 @@ decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
 
-deck.gl@^6.2.3:
-  version "6.2.4"
-  resolved "https://registry.yarnpkg.com/deck.gl/-/deck.gl-6.2.4.tgz#8652f492a6d6e30dc32925355d6f8f820967a70c"
+deck.gl@6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/deck.gl/-/deck.gl-6.3.0.tgz#23fdf5f3bc218ef32d67594c9e54ff38bc034a58"
   dependencies:
-    "@deck.gl/core" "^6.2.4"
-    "@deck.gl/layers" "^6.2.4"
-    "@deck.gl/react" "^6.2.4"
+    "@deck.gl/core" "^6.3.0"
+    "@deck.gl/layers" "^6.3.0"
+    "@deck.gl/react" "^6.3.0"
 
 decode-uri-component@^0.2.0:
   version "0.2.0"
@@ -5209,6 +5212,10 @@ lodash.clonedeep@^4.0.1:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
 
+lodash.curry@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.curry/-/lodash.curry-4.1.1.tgz#248e36072ede906501d75966200a86dab8b23170"
+
 lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
@@ -5314,16 +5321,6 @@ lru-queue@0.1:
   resolved "https://registry.yarnpkg.com/lru-queue/-/lru-queue-0.1.0.tgz#2738bd9f0d3cf4f84490c5736c48699ac632cda3"
   dependencies:
     es5-ext "~0.10.2"
-
-luma.gl@^6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/luma.gl/-/luma.gl-6.2.0.tgz#449760dc735e2e89a55bb78697c8dd1093626b2c"
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    math.gl "^2.2.0"
-    probe.gl "^2.0.1"
-    seer "^0.2.4"
-    webgl-debug "^2.0.0"
 
 luma.gl@^6.3.0:
   version "6.3.0"
@@ -5680,7 +5677,7 @@ mixin-deep@^1.2.0:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
 
-mjolnir.js@^1.0.0, mjolnir.js@^1.2.1:
+mjolnir.js@^1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/mjolnir.js/-/mjolnir.js-1.2.2.tgz#65938d6b443fed5b5c65456e6c934b01fece3610"
   dependencies:
@@ -6524,7 +6521,7 @@ pathval@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pathval/-/pathval-1.1.0.tgz#b942e6d4bde653005ef6b71361def8727d0645e0"
 
-pbf@^3.0.5:
+pbf@^3.0.5, pbf@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/pbf/-/pbf-3.1.0.tgz#f70004badcb281761eabb1e76c92f179f08189e9"
   dependencies:
@@ -8665,9 +8662,9 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
 
-"type-analyzer@https://registry.npmjs.org/type-analyzer/-/type-analyzer-0.1.4.tgz":
-  version "0.1.4"
-  resolved "https://registry.npmjs.org/type-analyzer/-/type-analyzer-0.1.4.tgz#4592d5792831d0fb061a68feb870d7d171c287aa"
+"type-analyzer@https://registry.npmjs.org/type-analyzer/-/type-analyzer-0.2.1.tgz":
+  version "0.2.1"
+  resolved "https://registry.npmjs.org/type-analyzer/-/type-analyzer-0.2.1.tgz#c3a04552be0114d079a54b5def72a828605f9cf9"
 
 type-check@~0.3.1, type-check@~0.3.2:
   version "0.3.2"
