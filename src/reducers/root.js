@@ -170,7 +170,13 @@ function decorate(target, savedInitialState = {}) {
   /**
    * REturn a reducer that innitiated with custom initial state.
    * The parameter should be an object mapping from `subreducer` name to custom subreducer state,
-   * which will be shallow **merged** with default initial state. Links to default subreducer state: `visState:
+   * which will be shallow **merged** with default initial state.
+   *
+   * Default subreducer state:
+   *  - `[visState](./vis-state.md#INITIAL_VIS_STATE)`
+   *  - `[mapState](./map-state.md#INITIAL_MAP_STATE)`
+   *  - `[mapStyle](./map-style.md#INITIAL_MAP_STYLE)`
+   *  - `[uiState](./ui-state.md#INITIAL_UI_STATE)`
    * @mixin reducer.initialState
    * @param {Object} iniSt - custom state to be merged with default initial state
    * @public

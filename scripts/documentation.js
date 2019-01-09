@@ -80,7 +80,10 @@ const TREE = {
       path: 'reducers',
       children: [
         ['root.js', 'reducers.md'],
-        ['vis-state-updaters.js', 'vis-state.md']
+        ['vis-state-updaters.js', 'vis-state.md'],
+        ['map-state-updaters.js', 'map-state.md'],
+        ['map-style-updaters.js', 'map-style.md'],
+        ['ui-state-updaters.js', 'ui-state.md']
       ]
     }
   ],

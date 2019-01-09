@@ -18,7 +18,111 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import {LAYER_CONFIG_ID, DELETE_DATA_ID} from 'constants/default-settings';
+import {
+  LAYER_CONFIG_ID,
+  DELETE_DATA_ID,
+  ADD_DATA_ID,
+  EXPORT_DATA_TYPE,
+  RATIOS,
+  RESOLUTIONS
+} from 'constants/default-settings';
+
+export const DEFAULT_ACTIVE_SIDE_PANEL = 'layer';
+export const DEFAULT_MODAL = ADD_DATA_ID;
+
+/**
+ * A list of map control visibilities and activeness.
+ * @constant
+ * @type {Object}
+ * @property {Object} visibleLayers - Default: `{show: true, active: false}`
+ * @property {Object} mapLegend - Default: `{show: true, active: false}`
+ * @property {Object} toggle3d - Default: `{show: true}`
+ * @property {Object} splitMap - Default: `{show: true}`
+ * @public
+ */
+export const DEFAULT_MAP_CONTROLS = {
+  visibleLayers: {
+    show: true,
+    active: false
+  },
+  mapLegend: {
+    show: true,
+    active: false
+  },
+  toggle3d: {
+    show: true
+  },
+  splitMap: {
+    show: true
+  }
+};
+
+/**
+ * Default image export config
+ * @constant
+ * @type {Object}
+ * @property {string} ratio - Default: 'SCREEN',
+ * @property {string} resolution - Default: 'ONE_X',
+ * @property {boolean} legend - Default: false,
+ * @property {string} imageDataUri - Default: '',
+ * @property {boolean} exporting - Default: false
+ * @public
+ */
+export const DEFAULT_EXPORT_IMAGE = {
+  // user options
+  ratio: RATIOS.SCREEN,
+  resolution: RESOLUTIONS.ONE_X,
+  legend: false,
+  // exporting state
+  imageDataUri: '',
+  exporting: false
+};
+
+/**
+ * @constant
+ * @type {Object}
+ * @property {string} selectedDataset - Default: '',
+ * @property {string} dataType - Default: 'csv',
+ * @property {boolean} filtered - Default: true,
+ * @property {boolean} config - deprecated
+ * @property {boolean} data - used in modal config expor. Default: falset
+ * @public
+ */
+export const DEFAULT_EXPORT_DATA = {
+  selectedDataset: '',
+  dataType: EXPORT_DATA_TYPE.CSV,
+  filtered: true,
+  config: false, // no longer used, since we removed the option to export config from modal data export
+  data: false // this is used in modal config export
+};
+
+/**
+ * Default initial `uiState`
+ * @constant
+ * @type {Object}
+ * @property {boolean} readOnly - Default: false
+ * @property {string} activeSidePanel - Default: 'layer'
+ * @property {string|null} currentModal - Default: 'addData'
+ * @property {string|null} datasetKeyToRemove - Default: null
+ * @property {string|null} visibleDropdown - Default: null
+ * @property {Object} exportImage - Default: `[DEFAULT_EXPORT_IMAGE](#DEFAULT_EXPORT_IMAGE)`
+ * @property {Object} exportData - Default: `[DEFAULT_EXPORT_DATA](#DEFAULT_EXPORT_DATA)`
+ * @property {Object} mapControls - Default: `[DEFAULT_MAP_CONTROLS](#DEFAULT_MAP_CONTROLS)`
+ * @public
+ */
+export const INITIAL_UI_STATE = {
+  readOnly: false,
+  activeSidePanel: DEFAULT_ACTIVE_SIDE_PANEL,
+  currentModal: DEFAULT_MODAL,
+  datasetKeyToRemove: null,
+  visibleDropdown: null,
+  // export image modal ui
+  exportImage: DEFAULT_EXPORT_IMAGE,
+  // export data modal ui
+  exportData: DEFAULT_EXPORT_DATA,
+  // map control panels
+  mapControls: DEFAULT_MAP_CONTROLS
+};
 
 /* Updaters */
 export const toggleSidePanelUpdater = (state, {payload: id}) => {
