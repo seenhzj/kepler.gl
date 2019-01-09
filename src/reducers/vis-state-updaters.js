@@ -67,6 +67,27 @@ import {processFileToLoad} from '/utils/file-utils';
 // disable capture exception for react-palm call to withTask
 disableStackCapturing();
 
+/**
+ * @constant
+ * @type {Object}
+ * @property {Array} layers
+ * @property {Array} layerData
+ * @property {Array} layerToBeMerged
+ * @property {Array} layerOrder
+ * @property {Array} filters
+ * @property {Array} filterToBeMerged
+ * @property {Array} datasets
+ * @property {string} editingDataset
+ * @property {Object} interactionConfig
+ * @property {Object} interactionToBeMerged
+ * @property {string} layerBlending
+ * @property {Object} hoverInfo
+ * @property {Object} clicked
+ * @property {boolean} fileLoading
+ * @property {*} fileLoadingErr
+ * @property {Array} splitMaps - a list of objects of layer availabilities and visibilities for each map
+ * @public
+ */
 export const INITIAL_VIS_STATE = {
   // layers
   layers: [],
@@ -89,6 +110,7 @@ export const INITIAL_VIS_STATE = {
   hoverInfo: undefined,
   clicked: undefined,
 
+  //TODO: not used anywhere, delete it
   fileLoading: false,
   fileLoadingErr: null,
 
